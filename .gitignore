@@ -1,0 +1,23 @@
+# Entorno virtual
+venv/
+
+# Build artifacts de PyInstaller
+build/
+dist/
+*.spec
+
+# Python bytecode
+__pycache__/
+*.py[cod]
+
+# Entorno y claves
+.env
+*.pem
+*.key
+
+# Windows
+Thumbs.db
+desktop.ini
+
+# Mapeos
+mapeos.json
