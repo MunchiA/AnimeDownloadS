@@ -86,7 +86,7 @@ def ejecutar_script(ruta_script):
 
     carpeta = "/".join(ruta_script.split("/")[:-1])
     archivo = ruta_script.split("/")[-1]
-    comando = f"cd {carpeta} && python3 {archivo}"
+    comando = f"source /root/myenv/bin/activate && cd {carpeta} && python3 {archivo}"
 
     try:
         key = paramiko.RSAKey.from_private_key_file(KEY_PATH)
