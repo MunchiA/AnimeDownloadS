@@ -142,6 +142,16 @@ def cargar_scripts():
 ventana = tk.Tk()
 ventana.title("AnimeDownloadS")
 
+# Establecer el ícono de la ventana
+icon_path = resource_path("munchi.ico")
+if os.path.exists(icon_path):
+    try:
+        ventana.iconbitmap(icon_path)
+    except Exception as e:
+        messagebox.showwarning("Advertencia", f"No se pudo cargar el ícono de la ventana desde {icon_path}: {e}")
+else:
+    messagebox.showwarning("Advertencia", f"El archivo de ícono {icon_path} no se encontró en el entorno empaquetado.")
+
 # --- CENTRAR VENTANA EN PANTALLA ---
 ventana.update_idletasks()  # Asegura que winfo_* devuelvan los valores correctos
 
